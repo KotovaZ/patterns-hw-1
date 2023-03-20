@@ -13,12 +13,18 @@ class QuadraticFormulaCalc
      *
      * @return float[]
      */
-    public function solve(float $a, float $b, float $c = 0): array
+    public function solve(float $a, float $b = 0, float $c = 0): array
     {
         if (abs($a) < PHP_FLOAT_EPSILON) {
             throw new InvalidArgumentException('Leading coefficient must be greater than 0');
         }
 
-        return [];
+        $d = pow($b, 2) - 4 * $a * $c;
+        
+        if ($d < 0) {
+            return [];
+        }
+
+        return [1];
     }
 }
