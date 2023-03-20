@@ -27,4 +27,12 @@ final class QuadraticFormulaCalcTest extends TestCase
         $roots = $this->calculator->solve(1, 0, 1);
         $this->assertCount(0, $roots);
     }
+
+    public function testSolveReturnsTwoRealSquereRoots()
+    {
+        $roots = $this->calculator->solve(1, 0, -1);
+        $this->assertCount(2, $roots);
+        $this->assertEquals(1, $roots[0]);
+        $this->assertEquals(-1, $roots[1]);
+    }
 }
