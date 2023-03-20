@@ -35,4 +35,11 @@ final class QuadraticFormulaCalcTest extends TestCase
         $this->assertEquals(1, $roots[0]);
         $this->assertEquals(-1, $roots[1]);
     }
+
+    public function testSolveReturnsOneRootOfMultiplicity2()
+    {
+        $roots = $this->calculator->solve(1, 2, 1);
+        $this->assertCount(1, $roots);
+        $this->assertEquals(-1, $roots[0]);
+    }
 }
