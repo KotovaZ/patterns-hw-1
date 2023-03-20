@@ -10,7 +10,7 @@ class QuadraticFormulaCalc
      * @param float $a
      * @param float $b
      * @param float $c
-     *
+     * @throws InvalidArgumentException
      * @return float[]
      */
     public function solve(float $a, float $b = 0, float $c = 0): array
@@ -32,6 +32,6 @@ class QuadraticFormulaCalc
             ];
         }
 
-        return [1];
+        return [(-$b) / 2 * $a];
     }
 }
