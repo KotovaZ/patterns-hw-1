@@ -21,4 +21,10 @@ final class QuadraticFormulaCalcTest extends TestCase
         $this->expectException(InvalidArgumentException::class);
         $this->calculator->solve(0, 1);
     }
+
+    public function testNoRoots()
+    {
+        $roots = $this->calculator->solve(1, 0, 1);
+        $this->assertCount(0, $roots);
+    }
 }
