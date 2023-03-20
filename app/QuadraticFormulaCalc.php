@@ -20,9 +20,16 @@ class QuadraticFormulaCalc
         }
 
         $d = pow($b, 2) - 4 * $a * $c;
-        
+
         if ($d < 0) {
             return [];
+        }
+
+        if ($d > 0) {
+            return [
+                (-$b + sqrt($d)) / 2 * $a,
+                (-$b - sqrt($d)) / 2 * $a
+            ];
         }
 
         return [1];
