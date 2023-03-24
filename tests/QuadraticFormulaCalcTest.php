@@ -4,7 +4,6 @@ require_once $_SERVER['DOCUMENT_ROOT'] . 'vendor/autoload.php';
 
 use App\Exceptions\InvalidArgumentException;
 use App\QuadraticFormulaCalc;
-use InvalidArgumentException as GlobalInvalidArgumentException;
 use PHPUnit\Framework\TestCase;
 
 final class QuadraticFormulaCalcTest extends TestCase
